@@ -44,7 +44,8 @@
             <li class="header-address-list">
               <a
                 class="header-address-link link"
-                href="mailto:info@devstudio.com"
+                hre
+                f="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
@@ -55,6 +56,11 @@
             </li>
           </ul>
         </address>
+        <button class="mobile-button" type="button">
+          <svg class="btn-mobile" width="32" height="22">
+            <use href="./images/icons.svg#icon-hamburger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -144,7 +150,11 @@
             <li class="team-list">
               <img
                 class="team-picture"
-                src="./images/designer.jpg"
+                srcset="
+                  ./images/designer@1x.jpg 1x,
+                  ./images/designer@1x.jpg 2x
+                "
+                src="./images/designer@1x.jpg"
                 alt="designer"
                 width="264"
               />
@@ -186,7 +196,11 @@
             <li class="team-list">
               <img
                 class="team-picture"
-                src="./images/developer.jpg"
+                srcset="
+                  ./images/developer@1x.jpg 1x,
+                  ./images/developer@1x.jpg 2x
+                "
+                src="./images/developer@1x.jpg"
                 alt="developer"
                 width="264"
               />
@@ -228,7 +242,11 @@
             <li class="team-list">
               <img
                 class="team-picture"
-                src="./images/marketing.jpg"
+                srcset="
+                  ./images/marketing@1x.jpg 1x,
+                  ./images/marketing@1x.jpg 2x
+                "
+                src="./images/marketing@1x.jpg"
                 alt="marketing"
                 width="264"
               />
@@ -270,7 +288,8 @@
             <li class="team-list">
               <img
                 class="team-picture"
-                src="./images/ui.jpg"
+                srcset="./images/ui@1.jpg 1x, ./images/ui@1.jpg 2x"
+                src="./images/ui@1.jpg"
                 alt="ui-designer"
                 width="264"
               />
@@ -312,7 +331,7 @@
           </ul>
         </div>
       </section>
-      <section class="customers">
+      <section class="customers hide">
         <div class="container">
           <h2 class="customers-title">Customers</h2>
           <ul class="customers-menu">
@@ -521,6 +540,104 @@
         </form>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu" type="button">
+        <svg class="menu-toggle-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link current" href="">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts">
+        <li class="mobile-contatcs-item">
+          <a class="mobile-contacts-link active" href="tel:+110001111111">
+            +11 (000) 111-11-11
+          </a>
+        </li>
+        <li class="mobile-contatcs-item">
+          <a class="mobile-contacts-link" href="mailto:info@devstudio.com">
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+
+      <ul class="mobile-socials socials">
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram-2"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter-1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook-1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin-1"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!----------->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

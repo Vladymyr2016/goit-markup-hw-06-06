@@ -77,6 +77,8 @@ img {
     align-items: center;
 }
 
+
+
 .header-logo {
     color: #4D5AE5;
     font-family: Raleway, sans-serif;
@@ -114,11 +116,12 @@ img {
     gap: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
     .header-menu {
         display: none;
     }
 }
+
 
 .header-list {
     color: #2e2f42;
@@ -177,6 +180,12 @@ img {
     margin-left: auto;
 }
 
+@media screen and (max-width: 767px) {
+    .header-address {
+        display: none;
+    }
+}
+
 .header-address-menu {
     display: flex;
     gap: 40px;
@@ -201,12 +210,138 @@ img {
     color: var(--ocean);
 }
 
+.mobile-button {
+    position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-button {
+        display: none;
+    }
+}
+
 /*====================*/
 
+/*======= Mobile-menu=====*/
+
+.menu-container {
+    position: fixed;
+    padding: 80px 35px 40px 40px;
+    position: relative;
+
+}
+
+@media screen and (min-width: 768px) {
+    .menu-container {
+        position: relative;
+        display: none;
+    }
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
+}
+
+.menu-toggle-icon {}
+
+.mobile-menu {
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    margin-bottom: auto;
+}
+
+.mobile-menu-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mobile-menu-link {
+    color: 2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+
+.mobile-contacts {
+    margin-bottom: 48px;
+}
+
+.mobile-contatcs-item:not(:last-child) {
+    margin-bottom: 40px;
+
+}
+
+.mobile-contacts-link {
+    color: var(--IRIS);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.active {}
+
+.mobile-socials {
+    display: flex;
+    gap: 56px;
+
+}
+
+.socials {}
+
+.socials-item {}
+
+.socials-link {
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials-icon {}
+
+.btn-mobile {
+    stroke: #2E2F42;
+
+}
+
+.mobile-contacts-link.active {
+    color: var(--accent-cl);
+}
+
+@media only screen and (min-width: 428px) {
+    .mobile-contacts-link.active {
+        font-size: 36px;
+    }
+}
+
+@media only screen and (max-width: 427.98px) {
+    .mobile-socials {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 428px) {
+    .mobile-socials {
+        gap: 56px;
+    }
+}
+
+/*=======================*/
+
 /*======hero======*/
-
-
-
 
 .hero {
     background-color: #2E2F42;
@@ -217,6 +352,7 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     max-width: 428px;
+    width: 100%;
     margin: 0 auto;
     background-size: cover;
 }
@@ -500,7 +636,14 @@ img {
 
 .team {
     background: #F4F4FD;
-    padding: 120px 0;
+    padding: 96px 82px;
+}
+
+@media screen and (min-width: 1158px) {
+    .team {
+        padding: 120px 0;
+    }
+
 }
 
 .team-title {
@@ -516,8 +659,35 @@ img {
 
 .team-menu {
     display: flex;
-    gap: 24px;
+    gap: 72px;
 }
+
+@media screen and (max-width: 428px) {
+    .team-menu {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .team-menu {
+        max-width: 768px;
+        width: 100%;
+        display: flex;
+        gap: 64px 24px;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .team-menu {
+        max-width: 1158px;
+        display: flex;
+        gap: 24px;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+}
+
 
 .team-list {
     background-color: #FFFFFF;
@@ -525,13 +695,24 @@ img {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
+    justify-content: center;
+}
+
+@media screen and (min-width: 768) {
+    .team-list {
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .team-list {
+        width: calc((100% - 72px) / 4);
+    }
 }
 
 .team-list-container {
     padding: 32px 0;
 }
-
-.team-picture {}
 
 .team-name {
     color: #2E2F42;
@@ -930,8 +1111,6 @@ img {
     width: 264px;
     text-align: left;
 }
-
-@media only screen and (min-width:) {}
 
 .footer-menu {
     display: flex;
