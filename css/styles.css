@@ -548,7 +548,6 @@ img {
 .strategy-menu {
     display: flex;
     gap: 72px;
-    margin-bottom: 8px;
 }
 
 @media screen and (max-width: 767px) {
