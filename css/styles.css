@@ -547,30 +547,31 @@ img {
 
 .strategy-menu {
     display: flex;
-    gap: 24px;
+    gap: 72px;
     margin-bottom: 8px;
 }
 
 @media screen and (max-width: 767px) {
     .strategy-menu {
         flex-direction: column;
+
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
     .strategy-menu {
         flex-wrap: wrap;
+        gap: 72px 24px;
+
     }
 }
 
-@media screen and (min-width: 1157px) {
+@media screen and (min-width: 1158px) {
     .strategy-menu {
-        margin-bottom: 8px;
+        gap: 24px;
     }
 }
 
-
-.strategy-list {}
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
     .strategy-list {
@@ -1339,9 +1340,10 @@ img {
     padding: 72px 16px 24px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
     .modal {
         width: 284px;
+
     }
 
 }
@@ -1356,7 +1358,7 @@ img {
 @media screen and (min-width: 768px) {
     .modal {
         width: 408px;
-        padding: 72px 16px 24px;
+        padding: 72px 24px 24px 23px;
     }
 
 }
